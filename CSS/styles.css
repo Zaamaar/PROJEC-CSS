@@ -137,6 +137,15 @@ padding-left: 0;
          
     }
  }
+ .icon-container{
+  background: red;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+ }
 
  /* BUTTONS */
  .btn{
@@ -150,6 +159,10 @@ padding-left: 0;
     white-space: nowrap ;
     text-align: center;
     margin: 1rem 0;
+ }
+ .btn__stretched{
+  padding-left: 6rem;
+  padding-right: 6rem;
  }
 .btn--primary{
      background: var(--color-primary);
@@ -361,3 +374,69 @@ font-size: 6rem;
         font-style: normal;
       }
   }
+  /* grid */
+  .grid{
+     display: grid;
+  }
+  @media screen and (min-width:768px) {
+    .grid--1x2{
+          grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (min-width:1024px) {
+    .grid--1x3{
+          grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* testimonials */
+  .testimonial{
+    padding: 3rem;
+    border-radius: 1rem;
+  }
+  .testimonial__image{
+    position: relative ;
+  }
+   .testimonial__image > icon-container {
+   position: absolute;
+   top: 3rem;
+   right: 32px;
+  }
+  .testimonial__image > img {
+    width:100%;
+  }
+ 
+
+
+  /* CALLOUTS */
+
+   .callout{
+    padding: 4rem;
+    border-radius: 5px ;
+    background: var(--color-primary);
+    color: white;
+  }
+  .callout__heading{
+    color: white;
+    margin-top: 0;
+    font-size: 3rem;
+  }
+   .callout .btn{
+    justify-self: center;
+    align-self: center;
+   }
+   .callout__content{
+    text-align: center;
+   }
+   @media screen  and (min-width:768px) {
+    .callout .grid--1x2  {
+      grid-template-columns: 1fr auto;
+    }
+    .callout__content{
+      text-align: left;
+    }
+    .callout .btn {
+      justify-self: start;
+      margin: 0 2rem;
+    }
+   }
